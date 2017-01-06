@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
  
 void FizzBazz(int a);
 int main()
@@ -7,10 +6,9 @@ int main()
 	int upperlimit=100;
 	 FizzBazz(upperlimit);
 }
-void FizzBazz(int a)
+void FizzBazz(int upperlimit)
 {
-	int count=0;
-	for(int i=1;i<=a;i++)
+	for(int i=1;i<=upperlimit;i++)
 	{   
 		if(i%3==0 && i%5==0)
 		{
@@ -24,8 +22,8 @@ void FizzBazz(int a)
 		}else{
 			printf("%d,",i);
 		}
-		count++;
-		if(count%10==0)
+		// 時々改行
+		if(i%10==0)
 		{
 			printf("\n");
 		}
